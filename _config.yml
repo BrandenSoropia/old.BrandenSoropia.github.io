@@ -20,6 +20,8 @@ url: "brandensoropia.github.io" # the base hostname & protocol for your site
 twitter_username: brandensoropia
 github_username:  BrandenSoropia
 
+encoding: utf-8
+
 # Build settings
 markdown: kramdown
 theme: minima
