@@ -21,7 +21,3 @@ twitter_username: brandensoropia
 github_username:  BrandenSoropia
 
 encoding: utf-8
-
-# Build settings
-markdown: kramdown
-theme: minima
