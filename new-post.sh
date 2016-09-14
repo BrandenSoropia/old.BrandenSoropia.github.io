@@ -7,11 +7,11 @@ ARGUMENTS
 formattedDate=`date +'%Y-%m-%d'`
 file=$formattedDate-$1.md
 
-if [ ! -d $2 ]; then
+if [ ! -d $2 ]; then # Check if directory exists
   echo $2 "does not exist"
   exit 1
-elif [ -f $2$file ]; then
-  echo $file "already exists"
+elif [ -f $2$file ]; then # Check if file already exists in that directory
+  echo $file "already exists in" $2
   exit 1
 fi
 

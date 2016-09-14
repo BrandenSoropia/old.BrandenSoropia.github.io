@@ -21,3 +21,11 @@ twitter_username: brandensoropia
 github_username:  BrandenSoropia
 
 encoding: utf-8
+
+defaults:
+   -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: Branden Soropia
