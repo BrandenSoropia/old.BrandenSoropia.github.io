@@ -6,7 +6,8 @@ sections: [ {name: 'About', link: '#about'} , {name: 'Contact', link: '#contact'
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/main.css"> -->
+    <link rel="stylesheet" type="text/css" href={{ site.url | append: "/css/main.css" }}>
   </head>
   <body>
     <nav>
