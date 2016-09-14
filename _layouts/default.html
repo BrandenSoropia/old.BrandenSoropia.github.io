@@ -1,12 +1,24 @@
 ---
+sections: [ {name: 'About', link: '#about'} , {name: 'Contact', link: '#contact'}, {name: 'Blah', link: '#blah'}]
 ---
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    {{ content }}
+    <nav>
+      <img src='./images/circle.png'/>
+      <ul>
+        {% for section in layout.sections %}
+          <li><a href={{ section.link }}>{{ section.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div id='content'>
+      {{ content }}
+    </div>
   </body>
 </html>

@@ -15,7 +15,7 @@ title: LOL
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
         </h2>
-        <p>{{ post.excerpt }}</p>
+        <p>{{ post.content }}</p>
       </li>
     {% endfor %}
   </ul>

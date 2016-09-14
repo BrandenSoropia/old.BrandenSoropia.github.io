@@ -1,7 +1,59 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+body {
+  margin: 0;
+}
 
-h2 {
-  background-color: rgb(132, 119, 179);
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Change this to 320px
+@media (max-width: 800px) {
+  body {
+    background-color: rgb(86, 131, 210);
+  }
+
+  #content {
+    position: absolute;
+    top: 100px;
+  }
+
+  nav {
+    background-color: rgb(61, 213, 16);
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  h2 {
+    background-color: rgb(132, 119, 179);
+  }
+
+  #content {
+    position: absolute;
+    left: 20vw;
+    width: 80vw;
+    min-width: 200px;
+  }
+
+  nav {
+    background-color: rgb(213, 160, 16);
+    position: fixed;
+    left: 0;
+    width: 20vw;
+    min-width: 100px;
+    height: 100%;
+  }
+
+  nav img {
+    width: 20vw;
+    height: 20vw;
+  }
 }
