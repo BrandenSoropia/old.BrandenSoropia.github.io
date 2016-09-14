@@ -11,7 +11,7 @@ sections: [ {name: 'About', link: '#about'} , {name: 'Contact', link: '#contact'
   </head>
   <body>
     <nav>
-      <img src='./images/circle.png'/>
+      <img src={{ site.url | append: "/images/circle.png" }}/>
       <ul>
         {% for section in layout.sections %}
           <li><a href={{ section.link }}>{{ section.name }}</a></li>

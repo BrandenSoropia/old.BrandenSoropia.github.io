@@ -13,12 +13,6 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Branden Soropia
-email: b.soropia@gmail.com
-description: Software developer in Toronto, Canada.
-# url: "brandensoropia.github.io" # the base hostname & protocol for your site
-twitter_username: brandensoropia
-github_username:  BrandenSoropia
 
 encoding: utf-8
 
