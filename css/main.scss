@@ -3,6 +3,8 @@
 ---
 body {
   margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(190, 84, 84);
 }
 
 ul {
@@ -11,49 +13,32 @@ ul {
   margin: 0;
 }
 
-// Change this to 320px
-@media (max-width: 800px) {
-  body {
-    background-color: rgb(86, 131, 210);
-  }
-
-  #content {
-    position: absolute;
-    top: 100px;
-  }
-
-  nav {
-    background-color: rgb(61, 213, 16);
-    position: fixed;
-    top: 0;
-    height: 100px;
-    width: 100%;
-  }
+h2 {
+  background-color: rgb(132, 119, 179);
 }
 
-@media (min-width: 800px) {
-  h2 {
-    background-color: rgb(132, 119, 179);
-  }
+.mdl-card {
+  background-color: rgb(198, 236, 254);
+  height: 250px;
+  width: 250px;
+}
 
-  #content {
-    position: absolute;
-    left: 20vw;
-    width: 80vw;
-    min-width: 200px;
-  }
+.mdl-card__title {
+      padding: 0px;
+}
 
-  nav {
-    background-color: rgb(213, 160, 16);
-    position: fixed;
-    left: 0;
-    width: 20vw;
-    min-width: 100px;
-    height: 100%;
-  }
+.mdl-card__title > img {
+  height: 250px;
+  width: 250px;
+}
 
-  nav img {
-    width: 20vw;
-    height: 20vw;
-  }
+.post-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-info {
+  height: 25%;
+  max-height: 250px;
+  width: 75%;
 }

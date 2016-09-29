@@ -1,22 +1,21 @@
 ---
 layout: default
-title: LOL
+title: Branden Soropia
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+  <h2 class="page-heading">Posts</h2>
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
+      <div class="post-container">
+        <div class="mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <img src="{{ site.url }}/assets/images/black-beach.png" />
+          </div>
+        </div>
+        <div class="post-info"
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-        <p>{{ post.content }}</p>
-      </li>
+          <p>{{ post.excerpt | truncate: 500 }}</p>
+        </div>
+      </div>
     {% endfor %}
-  </ul>
 </div>

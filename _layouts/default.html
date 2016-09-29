@@ -1,25 +1,32 @@
 ---
-sections: [ {name: 'About', link: '#about'} , {name: 'Contact', link: '#contact'}, {name: 'Blah', link: '#blah'}]
+sections: [{name: 'Branden Soropia', link: 'index.html'}, {name: 'About', link: '#about'} , {name: 'Contact', link: '#contact'}]
 ---
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <!-- <link rel="stylesheet" type="text/css" href="./css/main.css"> -->
-    <link rel="stylesheet" type="text/css" href={{ site.url | append: "/css/main.css" }}>
+    <!-- Material -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <!-- My Styles -->
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/main.css">
   </head>
   <body>
-    <nav>
-      <img src={{ site.url | append: "/images/circle.png" }}/>
-      <ul>
-        {% for section in layout.sections %}
-          <li><a href={{ section.link }}>{{ section.name }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <div id='content'>
-      {{ content }}
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+      <div class="mdl-layout__drawer">
+        <!-- <span class="mdl-layout-title">Title</span> -->
+        <nav class="mdl-navigation">
+           {% for section in layout.sections %}
+             <a class="mdl-navigation__link" href="{{ section.link }}">{{ section.name }}</a>
+           {% endfor %}
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        {{ content }}
+      </main>
     </div>
+
   </body>
 </html>
