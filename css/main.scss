@@ -1,44 +1,43 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
+
+
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: rgb(190, 84, 84);
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 h2 {
-  background-color: rgb(132, 119, 179);
-}
-
-.mdl-card {
-  background-color: rgb(198, 236, 254);
-  height: 250px;
-  width: 250px;
+  // background-color: rgb(132, 119, 179);
 }
 
 .mdl-card__title {
-      padding: 0px;
+  padding: 0px;
 }
 
 .mdl-card__title > img {
-  height: 250px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
 }
 
-.post-container {
-  display: flex;
-  flex-direction: row;
+.post-date {
+  color: rgb(130, 130, 130);
 }
 
 .post-info {
   height: 25%;
   max-height: 250px;
   width: 75%;
+}
+
+.post-link > h2 {
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

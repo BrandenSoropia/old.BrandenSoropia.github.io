@@ -1,6 +1,9 @@
 ---
 title: The Power of a Line
 date: 2016-09-15 19:17:55 -0400
+tags:
+- motivation
+image: black-beach.png
 ---
 
 ##The Power of a Line
