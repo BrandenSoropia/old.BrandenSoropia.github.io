@@ -6,7 +6,12 @@ title: Branden Soropia
 <div class="home">
   <h2 class="page-heading">Posts</h2>
     <!-- Display unique tags as chips -->
+    {% assign all_tags =  %}
     {% for post in site.posts %}
+      <span class="mdl-chip">
+        <span class="mdl-chip__text">{{ post.tags}}</span>
+      </span>
+      {% all_tags %}
     {% endfor %}
     <!-- Openning funny -->
     <div class="mdl-card mdl-shadow--2dp">
@@ -22,7 +27,7 @@ title: Branden Soropia
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
           <div class="mdl-card__title">
-            <img src="{{ site.url | append: page.image }}" />
+            <img src="{{ site.url | append: post.image-src }}" />
           </div>
         </div>
         <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--8-col-tablet mdl-cell--8-col-phone post-info">
