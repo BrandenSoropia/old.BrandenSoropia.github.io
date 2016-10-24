@@ -1,0 +1,39 @@
+---
+layout: default
+title: Branden Soropia
+---
+
+<div class="home">
+    <h2>Blog State:</h2>
+    <!-- Openning funny -->
+    <div class="mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <blockquote class="imgur-embed-pub" lang="en" data-id="a/tjxrc"><a href="//imgur.com/tjxrc">I animated the &#39;This is fine&#39; comic</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+      </div>
+      <div class="mdl-card__supporting-text">
+          This blog right now...
+      </div>
+    </div>
+    <!-- List posts -->
+    <h2 class="page-heading">Posts</h2>
+    {% for post in site.posts %}
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <img src="{{ site.url | append: post.image-src }}" />
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--8-col-tablet mdl-cell--8-col-phone post-info">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><h2>{{ post.title | escape }}</h2></a>
+          {% for tag in post.tags %}
+            <span class="mdl-chip">
+              <span class="mdl-chip__text">{{ tag }}</span>
+            </span>
+          {% endfor %}
+          <p class="post-date">{{ post.date }}</p>
+          <p>{{ post.excerpt | truncate: 400 }}</p>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Continue reading</a>
+        </div>
+      </div>
+    {% endfor %}
+</div>

@@ -1,5 +1,6 @@
 ---
-sections: [{name: 'Branden Soropia', link: 'index.html'}, {name: 'Side Projects', link: 'side_projects.html'} , {name: 'Download Resume', link: './assets/files/BrandenSoropiaResume.pdf'}]
+sections: [{name: 'Branden Soropia', link: 'index.html'}, {name: 'Side Projects', link: 'side_projects.html'} , {name: 'Blog', link: 'blog.html'}, {name: 'Download Resume', link: './assets/files/BrandenSoropiaResume.pdf'}]
+accounts: [{image: './assets/images/ic_email_black_36dp_1x.png', url: 'mailto:b.soropia@gmail.com'}, {image: './assets/images/Github-Mark-32px.png', url: 'https://github.com/BrandenSoropia'}, {image: './assets/images/In-Black-34px-R.png', url: 'https://ca.linkedin.com/in/branden-soropia-024304a3'}]
 ---
 <!DOCTYPE html>
 <html>
@@ -21,6 +22,11 @@ sections: [{name: 'Branden Soropia', link: 'index.html'}, {name: 'Side Projects'
            {% for section in layout.sections %}
              <a class="mdl-navigation__link" href="{{ section.link }}">{{ section.name }}</a>
            {% endfor %}
+           <div id="accounts">
+             {% for account in layout.accounts %}
+               <a href="{{ account.url }}"><img src="{{ account.image }}" /></a>
+             {% endfor %}
+           </div>
         </nav>
       </div>
       <main class="mdl-layout__content">
