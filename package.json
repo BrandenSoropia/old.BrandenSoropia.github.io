@@ -1,0 +1,29 @@
+{
+  "name": "branden-soropia-website",
+  "version": "1.0.0",
+  "description": "Branden Soropia's personal website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandenSoropia/BrandenSoropia.github.io.git"
+  },
+  "author": "Branden Soropia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandenSoropia/BrandenSoropia.github.io/issues"
+  },
+  "homepage": "https://github.com/BrandenSoropia/BrandenSoropia.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "install": "^0.8.8",
+    "npm": "^4.5.0"
+  }
+}
