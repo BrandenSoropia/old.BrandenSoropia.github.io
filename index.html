@@ -10,7 +10,32 @@
     </head>
 
     <body>
-        <nav>
+        <!-- Side Nav -->
+        <button id="side-nav-controller" onclick="openNav()">
+            &#9776;
+        </button>
+        <nav id="side-nav">
+            <ul>
+                <li>
+                    <button id="close-button" onclick="closeNav()">&#10006;</button>
+                </li>
+                <li>
+                    <a href="#about" onclick="closeNav()">About</a>
+                </li>
+                <li>
+                    <a href="#portfolio" onclick="closeNav()">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#resume" onclick="closeNav()">Resume</a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="closeNav()">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Header Nav -->
+        <nav id="header-nav">
             <ul>
                 <li>
                     <a href="#about">About</a>
@@ -28,44 +53,51 @@
             </ul>
         </nav>
 
-        <header id="landing">
-                <h1>Branden Soropia</h1>
-                <h3>Web and Game Developer</h3>
-        </header>
-
-        <section id="about">
-            <header>
-                <h2>About</h2>
+        <div id="content" onclick="closeNav()">
+            <header id="landing">
+                    <h1>Branden Soropia</h1>
+                    <h3>Web and Game Developer</h3>
             </header>
-        </section>
 
-        <section id="portfolio">
-            <header>
-                <h2>Portfolio</h2>
-            </header>
-        </section>
+            <section id="about">
+                <header>
+                    <h2>About</h2>
+                </header>
+            </section>
 
-        <section id="resume">
-            <header>
-                <h2>Resume</h2>
-            </header>
-        </section>
+            <section id="portfolio">
+                <header>
+                    <h2>Portfolio</h2>
+                </header>
+            </section>
 
-        <section id="contact">
-            <header>
-                <h2>Contact</h2>
-            </header>
-        </section>
+            <section id="resume">
+                <header>
+                    <h2>Resume</h2>
+                </header>
+                <button href="#">Download</button>
+            </section>
 
-        <footer>
-            <p>
-                Content &copy; Branden Soropia
-                <script type="text/javascript">
-                    // Always show the current year
-                    var d = new Date()
-                    document.write(d.getFullYear())
-                </script>
-            </p>
-        </footer>
+            <section id="contact">
+                <header>
+                    <h2>Contact</h2>
+                </header>
+            </section>
+
+            <footer>
+                <p>
+                    Content &copy; Branden Soropia
+                    <script type="text/javascript">
+                        // Always show the current year
+                        var d = new Date()
+                        document.write(d.getFullYear())
+                    </script>
+                </p>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/off-canvas.min.js"></script>
+
     </body>
 </html>
