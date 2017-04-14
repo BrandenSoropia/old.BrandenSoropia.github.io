@@ -6,30 +6,44 @@
         <meta name="description" content="Branden Soropia, software developer focused on web and game development. Lives in Toronto, Canada.">
         <title>Branden Soropia</title>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
     <body>
         <!-- Side Nav -->
-        <button id="side-nav-controller" onclick="openNav()">
-            &#9776;
+        <button id="side-nav-controller" onclick="toggleNav()" type="button">
+            <i class="material-icons">menu</i>
         </button>
         <nav id="side-nav">
             <ul>
                 <li>
-                    <button id="close-button" onclick="closeNav()">&#10006;</button>
+                    <a href="#about" onclick="closeNav()">
+                        <i class="material-icons">info</i>
+                        <br>
+                        About
+                    </a>
                 </li>
                 <li>
-                    <a href="#about" onclick="closeNav()">About</a>
+                    <a href="#portfolio" onclick="closeNav()">
+                        <i class="material-icons">folder_special</i>
+                        <br>
+                        Portfolio
+                    </a>
                 </li>
                 <li>
-                    <a href="#portfolio" onclick="closeNav()">Portfolio</a>
+                    <a href="#resume" onclick="closeNav()">
+                        <i class="material-icons">assignment_ind</i>
+                        <br>
+                        Resume
+                    </a>
                 </li>
                 <li>
-                    <a href="#resume" onclick="closeNav()">Resume</a>
-                </li>
-                <li>
-                    <a href="#contact" onclick="closeNav()">Contact</a>
+                    <a href="#contact" onclick="closeNav()">
+                        <i class="material-icons">contact_mail</i>
+                        <br>
+                        Contact
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -53,7 +67,7 @@
             </ul>
         </nav>
 
-        <div id="content" onclick="closeNav()">
+        <div id="content">
             <header id="landing">
                     <h1>Branden Soropia</h1>
                     <h3>Web and Game Developer</h3>

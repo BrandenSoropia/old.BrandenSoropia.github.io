@@ -10,11 +10,6 @@ body {
         background-color: @blue;
     }
 
-    #close-button {
-        float: right;
-        font-size: 50px;
-    }
-
     #content {
         transition: margin-left .5s;
         overflow-x: hidden;
@@ -32,13 +27,22 @@ body {
         height: 100vh;
         text-align: center;
         width: 100vw;
+
+        h1 {
+            margin-top: 0;
+            padding-top: 20%;
+        }
+    }
+
+    .material-icons {
+        font-size: 50px;
     }
 
     #side-nav {
-        background-color: grey;
+        background-color: black;
         height: 100vh;
         left: 0;
-        overflow-x: hidden; /* Disable horizontal scroll */
+        overflow: hidden; /* Disable horizontal and vertical scroll */
         position: fixed;
         top: 0;
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -67,5 +71,13 @@ body {
     }
 
     #side-nav-controller {
+        background-color: white;
+        border-radius: 25px;
+        transition: margin-left .5s;
+        left: 0;
+        overflow: hidden; /* Disable horizontal and vertical scroll */
+        position: fixed;
+        top: 0;
+        z-index: 9999; /* Stay on top */
     }
 }
