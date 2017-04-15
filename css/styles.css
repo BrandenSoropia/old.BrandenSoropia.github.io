@@ -29,8 +29,11 @@ body {
   .material-icons {
     font-size: 50px;
   }
+  section header {
+    text-align: center;
+  }
   #side-nav {
-    background-color: black;
+    background-color: #4d4d4d;
     height: 100vh;
     left: 0;
     overflow: hidden;
@@ -60,6 +63,7 @@ body {
   }
   #side-nav ul li a {
     text-decoration: none;
+    color: #aeaeae;
   }
   #side-nav-controller {
     background-color: white;

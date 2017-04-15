@@ -38,8 +38,14 @@ body {
         font-size: 50px;
     }
 
+    section {
+        header {
+            text-align: center;
+        }
+    }
+
     #side-nav {
-        background-color: black;
+        background-color: @side-nav-background;
         height: 100vh;
         left: 0;
         overflow: hidden; /* Disable horizontal and vertical scroll */
@@ -62,10 +68,12 @@ body {
             li {
                 flex: 1 1 100%;
                 text-align: center;
-
                 a {
                     text-decoration: none;
+                    color: @side-nav-font;
                 }
+
+
             }
         }
     }

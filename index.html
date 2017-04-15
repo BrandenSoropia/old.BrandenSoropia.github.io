@@ -13,7 +13,7 @@
     <body>
         <!-- Side Nav -->
         <button id="side-nav-controller" onclick="toggleNav()" type="button">
-            <i class="material-icons">menu</i>
+            <i id="side-nav-controller-icon" class="material-icons">menu</i>
         </button>
         <nav id="side-nav">
             <ul>
@@ -92,6 +92,17 @@
                 <button href="#">Download</button>
             </section>
 
+            <!-- Put demo, bugs or random fun feature here! -->
+            <section id="showcase">
+                <header>
+                    <h2>Bug or Feature?</h2>
+                    <p>When icon toggling goes wrong yet looks so right.</p>
+                </header>
+                <button id="bunny-bear-button" onclick="buttonBunnyBearToggle(this)">
+                    <i class="material-icons">warning</i>
+                </button>
+            </section>
+
             <section id="contact">
                 <header>
                     <h2>Contact</h2>
@@ -112,6 +123,6 @@
 
         <!-- Scripts -->
         <script src="js/off-canvas.min.js"></script>
-
+        <script src="js/bunny-bear-button.min.js"></script>
     </body>
 </html>
