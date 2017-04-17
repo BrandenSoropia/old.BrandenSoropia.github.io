@@ -8,6 +8,14 @@ body {
 @media (max-width: 600px) {
     #about {
         background-color: @blue;
+
+        p {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
     }
 
     #content {
@@ -68,19 +76,18 @@ body {
             li {
                 flex: 1 1 100%;
                 text-align: center;
+
                 a {
                     text-decoration: none;
                     color: @side-nav-font;
                 }
-
-
             }
         }
     }
 
     #side-nav-controller {
-        background-color: white;
-        border-radius: 25px;
+        background-color: transparent;
+        border-color: transparent;
         transition: margin-left .5s;
         left: 0;
         overflow: hidden; /* Disable horizontal and vertical scroll */
