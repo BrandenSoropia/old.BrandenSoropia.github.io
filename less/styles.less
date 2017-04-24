@@ -1,8 +1,27 @@
 @import "variables.less";
+@import "animations.less";
 
 body {
     margin: 0;
     overflow-x: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.fadeOutFromDisplay {
+    animation: fadeOut 1.0s ease-in, hideSpace 0s;
+    animation-delay: 0s, 1.0s;
+    -webkit-animation-delay: 0s, 1.0s;
+    -webkit-animation: fadeOut 1.0s ease-in, hideSpace 1.0s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+.fadeInFromNone {
+    animation: fadeIn 1.0s ease-in;
+    -webkit-animation: fadeIn 1.0s ease-in;
 }
 
 @media (max-width: 600px) {
