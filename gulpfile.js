@@ -7,7 +7,7 @@ var uglify = require('gulp-uglify');
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-    return gulp.src(['less/styles.less', 'less/variables.less', 'animations.less'])
+    return gulp.src('less/styles.less')
         .pipe(less())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
@@ -17,7 +17,7 @@ gulp.task('less', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
-    return gulp.src(['css/styles.css', 'css/variables.css'])
+    return gulp.src('css/styles.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))

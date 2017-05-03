@@ -1,0 +1,58 @@
+// Modified from source: http://stackoverflow.com/questions/12813573/position-icons-into-circle
+@radius-from-center: 7.5em;
+
+.center {
+    transform: translate(.7em);
+}
+
+#circle-container {
+    background-color: @grey;
+    height: 100vh;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+
+    li {
+        left: 50%;
+        margin: -2em;
+        position: absolute;
+        top: 50%;
+
+        #about-icon {
+            border: 10px solid @light-blue;
+            border-radius: 50%;
+            background-color: @light-blue;
+        }
+
+        #email-icon {
+            border: 10px solid @maroon;
+            border-radius: 50%;
+            background-color: @maroon;
+        }
+
+        #portfolio-icon {
+            border: 10px solid @brown;
+            border-radius: 50%;
+            background-color: @brown;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.deg30 {
+    transform: rotate(30deg) translate(@radius-from-center) rotate(-30deg);
+}
+
+.deg150 {
+    transform: rotate(150deg) translate(@radius-from-center) rotate(-150deg);
+}
+
+.deg270 {
+    transform: rotate(270deg) translate(@radius-from-center) rotate(-270deg);
+}
