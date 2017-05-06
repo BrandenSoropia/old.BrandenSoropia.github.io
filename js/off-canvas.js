@@ -1,7 +1,8 @@
+// Create material-icon with icon name and append to parent
 function createChildIcon (iconName, parent) {
     var icon = document.createElement("i");
 
-    icon.id = "side-nav-controller-icon";
+    icon.id = "nav-controller-icon";
     icon.className = "material-icons";
     icon.innerHTML = iconName;
     parent.appendChild(icon);
@@ -11,30 +12,39 @@ function removeNode (node) {
     node.parentNode.removeChild(node);
 }
 
+// Return navigation container, controller and icon elements
+function getNavElements () {
+    var container = document.getElementById("circle-nav");
+    var controller = document.getElementById("nav-controller");
+    var icon = document.getElementById("nav-controller-icon");
+
+    return {
+        CONTAINER: container,
+        CONTROLLER: controller,
+        ICON: icon
+    }
+}
+
+// Show navigation and change button icon to "close"
 function openNav () {
-    document.getElementById("side-nav").style.width = "100px";
-    document.getElementById("content").style.marginLeft = "100px";
+    var nav = getNavElements();
 
-    var sideNavController = document.getElementById("side-nav-controller");
-    var sideNavControllerIcon = document.getElementById("side-nav-controller-icon");
+    nav.CONTAINER.classList.remove("hidden");
+    removeNode(nav.ICON);
+    createChildIcon("close", nav.CONTROLLER);
 
-    removeNode(sideNavControllerIcon); // Remove menu icon
-    createChildIcon("close", sideNavController); // Replace with close icon
-    sideNavController.style.marginLeft = "100px";
 }
 
+// Hide navigation and change button icon to "open"
 function closeNav() {
-    document.getElementById("side-nav").style.width = "0";
-    document.getElementById("content").style.marginLeft = "0";
+    var nav = getNavElements();
 
-    var sideNavController = document.getElementById("side-nav-controller");
-    var sideNavControllerIcon = document.getElementById("side-nav-controller-icon");
-
-    removeNode(sideNavControllerIcon); // Remove close icon
-    createChildIcon("menu", sideNavController); // Replace with menu icon
-    sideNavController.style.marginLeft = "0";
+    nav.CONTAINER.classList.add("hidden");
+    removeNode(nav.ICON);
+    createChildIcon("menu", nav.CONTROLLER);
 }
 
+// Toggle navigation display
 function toggleNav () {
     if (JSON.parse(localStorage.getItem("isSideNavActive")) === "true") { // Close
         localStorage.setItem("isSideNavActive", JSON.stringify("false"));
