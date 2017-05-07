@@ -1,9 +1,11 @@
+// Append className to element with id
 function addClass (id, className) {
     var element = document.getElementById(id);
-    element.className += " " + className;
+    element.classList.add(className);
 }
 
-function removeAllClasses (id) {
+// Remove class from element with id
+function removeClass (id, className) {
     var element = document.getElementById(id);
-    element.className = "";
+    element.classList.remove(className);
 }

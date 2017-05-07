@@ -34,6 +34,7 @@
 }
 #circle-container {
   background-color: rgba(0, 0, 0, 0.75);
+  color: white;
   height: 100vh;
   list-style-type: none;
   margin: 0;

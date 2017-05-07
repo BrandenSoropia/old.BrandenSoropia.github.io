@@ -11,22 +11,23 @@
     </head>
 
     <body>
-        <button id="nav-controller" onclick="toggleNav()">
-            <i id="nav-controller-icon" class="material-icons">menu</i>
+        <button id="close-section-button" class="hidden" onclick="toggleNav()">
+            <i class="material-icons">close</i>
         </button>
-        <nav class="hidden" id="circle-nav">
+
+        <nav id="circle-nav">
             <ul id="circle-container">
                 <li class="center">
                     <img src="img/profile-200.jpg"></img>
                 </li>
                 <li class="deg30">
-                    <a href="#contact"><i id="email-icon" class="material-icons">email</i></a>
+                    <i id="email-icon" class="material-icons" onclick="toggleNav('contact')">email</i>
                 </li>
                 <li class="deg150">
-                    <a href="#portfolio"><i id="portfolio-icon" class="material-icons">work</i></a>
+                    <i id="portfolio-icon" class="material-icons" onclick="toggleNav('portfolio')">work</i>
                 </li>
                 <li class="deg270">
-                    <a href="#about"><i id="about-icon" class="material-icons">person</i></a>
+                    <i id="about-icon" class="material-icons" onclick="toggleNav('about')">person</i>
                 </li>
             </ul>
         </nav>
@@ -49,57 +50,49 @@
             </ul>
         </nav>
 
-        <div id="content">
-            <header onclick="addClass('landing', 'fadeOutFromDisplay')" id="landing">
-                    <h1>Branden Soropia</h1>
-                    <h3>Software Developer</h3>
+        <!-- Content -->
+        <header class="hidden" id="landing" onclick="addClass('landing', 'fadeOutFromDisplay')">
+                <h1>Branden Soropia</h1>
+                <h3>Software Developer</h3>
+        </header>
+
+        <section class="hidden" id="about">
+            <header>
+                <h2>About</h2>
             </header>
+            <p>
+                Working on my Computer Science undergraduate at Univerity of Toronto and mastering latte art.
+            </p>
+            <button><a href="files/BrandenSoropiaDevResume.pdf">Get my resume!</a></button>
+        </section>
 
-            <section id="about">
-                <header>
-                    <h2>About</h2>
-                </header>
-                <p>
-                    Working on my Computer Science undergraduate at Univerity of Toronto and mastering latte art.
-                </p>
-            </section>
-
-            <section id="portfolio">
-                <header>
-                    <h2>Portfolio</h2>
-                </header>
-                <!-- Links to Projects -->
-                <div class="project">
-                    <!-- TODO: Keep title to single line and font size fills space -->
-                    <h3>LoL Tournaments</h3>
-                    <img
-                        sizes="150vw"
-                        srcset="img/lol-tournaments-250.jpg 250w,
-                                img/lol-tournaments-250.jpg 500w"
-                        alt="Applicant applied to one tournament and 2 visible open tournaments."
-                    >
-                    <div class="tags">
-                        <p>React</p>
-                        <p>Redux</p>
-                        <p>Express</p>
-                        <p>Sequelize</p>
-                        <p>Material-UI</p>
-                    </div>
-                    <p>
-                        Create, manage and apply to public League of Legends tournements.
-                    </p>
-                    <!-- Link to code and demo (if available) -->
-                    <a href="https://github.com/BrandenSoropia/LoLTournaments">Source</a>
+        <section class="hidden" id="portfolio">
+            <header>
+                <h2>Portfolio</h2>
+            </header>
+            <!-- Links to Projects -->
+            <div class="project">
+                <!-- TODO: Keep title to single line and font size fills space -->
+                <h3>LoL Tournaments</h3>
+                <img
+                    sizes="150vw"
+                    srcset="img/lol-tournaments-250.jpg 250w,
+                            img/lol-tournaments-250.jpg 500w"
+                    alt="Applicant applied to one tournament and 2 visible open tournaments."
+                >
+                <div class="tags">
+                    <p>React</p>
+                    <p>Redux</p>
+                    <p>Express</p>
+                    <p>Sequelize</p>
+                    <p>Material-UI</p>
                 </div>
-            </section>
-
-            <section id="resume">
-                <header>
-                    <h2>Resume</h2>
-                </header>
-                <button href="#">Download</button>
-            </section>
-
+                <p>
+                    Create, manage and apply to public League of Legends tournements.
+                </p>
+                <!-- Link to code and demo (if available) -->
+                <a href="https://github.com/BrandenSoropia/LoLTournaments">Source</a>
+            </div>
             <!-- Put demo, bugs or random fun feature here! -->
             <section id="showcase">
                 <header>
@@ -107,31 +100,37 @@
                     <p>When icon toggling goes wrong yet looks so right.</p>
                 </header>
                 <button id="bunny-bear-button" onclick="buttonBunnyBearToggle(this)">
-                    <i class="material-icons">warning</i>
+                    <i class="material-icons">close</i>
                 </button>
             </section>
+        </section>
 
-            <section id="contact">
-                <header>
-                    <h2>Contact</h2>
-                </header>
-            </section>
+        <section class="hidden" id="contact">
+            <header>
+                <h2>Contact</h2>
+            </header>
+        </section>
 
-            <footer>
-                <p>
-                    Content &copy; Branden Soropia
-                    <script type="text/javascript">
-                        // Always show the current year
-                        var d = new Date()
-                        document.write(d.getFullYear())
-                    </script>
-                </p>
-            </footer>
-        </div>
+        <footer>
+            <p>
+                Content and design &copy; Branden Soropia
+                <script type="text/javascript">
+                    // Always show the current year
+                    var d = new Date()
+                    document.write(d.getFullYear())
+                </script>
+            </p>
+        </footer>
 
         <!-- Scripts -->
+        <script type="text/javascript">
+            function activateNav() {
+                localStorage.setItem("isNavActive", JSON.stringify("true"));
+            }
+            window.onload = activateNav;
+        </script>
+        <script src="js/class-manager.min.js"></script>
         <script src="js/off-canvas.min.js"></script>
         <script src="js/bunny-bear-button.min.js"></script>
-        <script src="js/class-manager.min.js"></script>
     </body>
 </html>

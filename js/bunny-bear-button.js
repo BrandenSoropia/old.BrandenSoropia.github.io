@@ -1,3 +1,13 @@
+// Create material-icon with icon name and append to parent
+function createChildIcon (iconName, parent) {
+    var icon = document.createElement("i");
+
+    icon.id = "nav-controller-icon";
+    icon.className = "material-icons";
+    icon.innerHTML = iconName;
+    parent.appendChild(icon);
+}
+
 // Change icons of button as it's clicked, turns into bunny and polar bear
 function buttonBunnyBearToggle (button) {
     if (JSON.parse(localStorage.getItem("isDemoActive")) === "true") {
