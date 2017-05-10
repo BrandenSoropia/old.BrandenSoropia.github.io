@@ -26,15 +26,40 @@ body {
 }
 
 @media (max-width: 600px) {
-    #about {
-        background-color: @light-blue;
+    section p {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
 
-        p {
-            text-align: center;
+    #about {
+        padding: 5% 0 5% 0;
+        text-align: center;
+
+        a {
+            background-color: @light-blue;
+            border-color: @light-blue;
+            border-radius: 16px;
+            border-style: solid;
+            border-width: 2px;
+            color: black;
+            display: inline-block;
+            width: 50%;
+            height: 25px;
+            max-width: 100%;
+            text-decoration: none;
+
+            i {
+                font-size: 25px;
+                vertical-align: middle;
+            }
         }
 
         h2 {
             margin-top: 0;
+        }
+
+        p {
+            padding: 0 5% 0 5%;
         }
     }
 
@@ -59,33 +84,41 @@ body {
         display: none;
     }
 
-    .material-icons {
-        font-size: 50px;
-    }
+    #portfolio {
+        .project {
+            text-align: center;
+            background-color: rgba(134, 155, 167, 0.2);
+            margin: 0 25px 0 25px;
+            h3 {
+                font-size: 10vw;
+                white-space: nowrap;
+            }
 
-    .project {
-        text-align: center;
-        background-color: rgba(134, 155, 167, 0.2);
-        margin: 0 25px 0 25px;
-        h3 {
-            font-size: 10vw;
-            white-space: nowrap;
+            .tags {
+                display: flex;
+                display: -webkit-flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0 10px 0 10px;
+
+                p {
+                    background-color: white;
+                    border-color: black;
+                    border-radius: 2px;
+                    flex: 1 1 auto;
+                    margin: 2px;
+                }
+            }
         }
 
-        .tags {
-            display: flex;
-            display: -webkit-flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin: 0 10px 0 10px;
+        #showcase {
+            text-align: center;
 
-            p {
+            #bunny-bear-button {
                 background-color: white;
                 border-color: black;
-                border-radius: 2px;
-                flex: 1 1 auto;
-                margin-left: 2px;
-                margin-right: 2px;
+                border-radius: 50px;
+                border-style: solid;
             }
         }
     }
