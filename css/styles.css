@@ -124,6 +124,14 @@ body {
     font-size: 25px;
     vertical-align: middle;
   }
+  #about .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #about .gallery img {
+    flex: auto;
+    width: 50%;
+  }
   #about h2 {
     margin-top: 0;
   }
