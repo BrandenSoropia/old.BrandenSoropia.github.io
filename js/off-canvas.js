@@ -17,6 +17,8 @@ function toggleNav (sectionId) {
         removeClass("close-section-button", "hidden");
 
         closeNav();
+
+        window.scrollTo(0, 0); // Scroll to top of section
     } else { // Open nav
         localStorage.setItem("isNavActive", JSON.stringify("true"));
         // Hide displayed section and close section button

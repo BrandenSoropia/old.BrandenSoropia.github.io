@@ -83,6 +83,14 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+#close-section-button {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+  color: white;
+  float: left;
+  margin: 2%;
+  position: fixed;
+}
 .hidden {
   display: none;
 }
@@ -109,15 +117,13 @@ body {
   }
   #about a {
     background-color: #c5dee9;
-    border-color: #c5dee9;
-    border-radius: 16px;
+    border-color: black;
     border-style: solid;
     border-width: 2px;
     color: black;
     display: inline-block;
-    width: 50%;
-    height: 25px;
-    max-width: 100%;
+    line-height: 2;
+    padding: 0 10px 0 10px;
     text-decoration: none;
   }
   #about a i {
@@ -126,11 +132,11 @@ body {
   }
   #about .gallery {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   #about .gallery img {
     flex: auto;
-    width: 50%;
   }
   #about h2 {
     margin-top: 0;
