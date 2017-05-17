@@ -15,34 +15,12 @@ body {
     margin: 2%;
     position: fixed;
 }
-
 .hidden {
     display: none;
 }
 
-.fadeOutFromDisplay {
-    animation: fadeOut 1.0s ease-in, hideSpace 0s;
-    animation-delay: 0s, 1.0s;
-    -webkit-animation-delay: 0s, 1.0s;
-    -webkit-animation: fadeOut 1.0s ease-in, hideSpace 1.0s;
-    -webkit-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-}
-
-.fadeInFromNone {
-    animation: fadeIn 1.0s ease-in;
-    -webkit-animation: fadeIn 1.0s ease-in;
-}
-
 @media (max-width: 600px) {
-
-    section p {
-        font-size: 1.2em;
-        line-height: 1.5;
-    }
-
     #about {
-        padding: 5% 0 5% 0;
         text-align: center;
 
         a {
@@ -73,18 +51,36 @@ body {
             }
         }
 
-        h2 {
-            margin-top: 0;
+        p {
+            padding: 0 25px 0 25px;
+        }
+    }
+
+    #contact {
+        background-color: @light-blue;
+        padding: 25px;
+
+        #submit-email {
+            background-color: white;
+            line-height: 3;
+            margin-top: 10px;
         }
 
-        p {
-            padding: 0 5% 0 5%;
+        form {
+            display: flex;
+            flex-direction: column;
+
         }
     }
 
     #content {
         transition: margin-left .5s;
         overflow-x: hidden;
+    }
+
+    h2 {
+        margin-top: 0;
+        padding-top: 25px;
     }
 
     #landing {
@@ -108,6 +104,7 @@ body {
             text-align: center;
             background-color: rgba(134, 155, 167, 0.2);
             margin: 0 25px 0 25px;
+
             h3 {
                 font-size: 10vw;
                 white-space: nowrap;
@@ -144,7 +141,13 @@ body {
 
     section {
         header {
+            font-size: 1.2em;
             text-align: center;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
         }
     }
 }

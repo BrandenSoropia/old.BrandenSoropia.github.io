@@ -94,25 +94,8 @@ body {
 .hidden {
   display: none;
 }
-.fadeOutFromDisplay {
-  animation: fadeOut 1s ease-in, hideSpace 0s;
-  animation-delay: 0s, 1.0s;
-  -webkit-animation-delay: 0s, 1.0s;
-  -webkit-animation: fadeOut 1s ease-in, hideSpace 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-.fadeInFromNone {
-  animation: fadeIn 1s ease-in;
-  -webkit-animation: fadeIn 1s ease-in;
-}
 @media (max-width: 600px) {
-  section p {
-    font-size: 1.2em;
-    line-height: 1.5;
-  }
   #about {
-    padding: 5% 0 5% 0;
     text-align: center;
   }
   #about a {
@@ -138,15 +121,29 @@ body {
   #about .gallery img {
     flex: auto;
   }
-  #about h2 {
-    margin-top: 0;
-  }
   #about p {
-    padding: 0 5% 0 5%;
+    padding: 0 25px 0 25px;
+  }
+  #contact {
+    background-color: #c5dee9;
+    padding: 25px;
+  }
+  #contact #submit-email {
+    background-color: white;
+    line-height: 3;
+    margin-top: 10px;
+  }
+  #contact form {
+    display: flex;
+    flex-direction: column;
   }
   #content {
     transition: margin-left 0.5s;
     overflow-x: hidden;
+  }
+  h2 {
+    margin-top: 0;
+    padding-top: 25px;
   }
   #landing {
     background-color: #f3f3f3;
@@ -194,6 +191,11 @@ body {
     border-style: solid;
   }
   section header {
+    font-size: 1.2em;
     text-align: center;
+  }
+  section p {
+    font-size: 1.2em;
+    line-height: 1.5;
   }
 }

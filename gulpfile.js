@@ -4,12 +4,17 @@ var browserSync = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var argv = require('yargs').argv;
+console.log(argv);
+
+var dest = argv.dest === undefined ? './' : argv.dest + '/';
+console.log("Destination: " + dest);
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
     return gulp.src('less/styles.less')
         .pipe(less())
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest(dest + 'css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -20,7 +25,7 @@ gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/styles.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest(dest + 'css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -31,7 +36,7 @@ gulp.task('minify-js', function() {
     return gulp.src(['js/off-canvas.js', 'js/bunny-bear-button.js', 'js/class-manager.js'])
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('js'))
+        .pipe(gulp.dest(dest + 'js'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -58,3 +63,13 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
+
+gulp.task('build', ['less', 'minify-css', 'minify-js'], function () {
+    return gulp.src([
+        'index.html',
+        '**/css/**/*.min.*',
+        '**/files/*.pdf',
+        '**/img/**/*.jpg'
+    ])
+    .pipe(gulp.dest('public'));
+})
