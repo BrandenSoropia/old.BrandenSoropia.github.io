@@ -79,6 +79,45 @@
 .material-icons {
   font-size: 50px;
 }
+#about {
+  text-align: center;
+}
+#about a {
+  background-color: #c5dee9;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  color: black;
+  display: inline-block;
+  line-height: 2;
+  padding: 0 5% 0 5%;
+  text-decoration: none;
+}
+#about a i {
+  font-size: 25px;
+  vertical-align: middle;
+}
+#about .gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#about .gallery img {
+  flex: auto;
+}
+@media (min-width: 600px) {
+  #about .gallery {
+    padding: 0 20% 0 20%;
+  }
+}
+#about p {
+  padding: 0 10% 0 10%;
+}
+@media (min-width: 600px) {
+  #about p {
+    padding: 0 20% 0 20%;
+  }
+}
 body {
   margin: 0;
   overflow-x: hidden;
@@ -91,111 +130,77 @@ body {
   margin: 2%;
   position: fixed;
 }
+#contact {
+  background-color: #c5dee9;
+  padding: 5%;
+}
+#contact #submit-email {
+  background-color: white;
+  font-size: 1.2em;
+  line-height: 3;
+  margin-top: 10px;
+  min-width: 25%;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+#content {
+  transition: margin-left 0.5s;
+  overflow-x: hidden;
+}
+h2 {
+  margin-top: 0;
+  padding-top: 25px;
+}
 .hidden {
   display: none;
 }
-@media (max-width: 600px) {
-  #about {
-    text-align: center;
-  }
-  #about a {
-    background-color: #c5dee9;
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
-    color: black;
-    display: inline-block;
-    line-height: 2;
-    padding: 0 10px 0 10px;
-    text-decoration: none;
-  }
-  #about a i {
-    font-size: 25px;
-    vertical-align: middle;
-  }
-  #about .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #about .gallery img {
-    flex: auto;
-  }
-  #about p {
-    padding: 0 25px 0 25px;
-  }
-  #contact {
-    background-color: #c5dee9;
-    padding: 25px;
-  }
-  #contact #submit-email {
-    background-color: white;
-    line-height: 3;
-    margin-top: 10px;
-  }
-  #contact form {
-    display: flex;
-    flex-direction: column;
-  }
-  #content {
-    transition: margin-left 0.5s;
-    overflow-x: hidden;
-  }
-  h2 {
-    margin-top: 0;
-    padding-top: 25px;
-  }
-  #landing {
-    background-color: #f3f3f3;
-    height: 100vh;
-    text-align: center;
-    width: 100vw;
-  }
-  #landing h1 {
-    margin-top: 0;
-    padding-top: 20%;
-  }
-  #main-nav {
-    display: none;
-  }
+#main-nav {
+  display: none;
+}
+#portfolio .project {
+  text-align: center;
+  background-color: rgba(134, 155, 167, 0.2);
+  margin: 0 10% 0 10%;
+}
+@media (min-width: 600px) {
   #portfolio .project {
-    text-align: center;
-    background-color: rgba(134, 155, 167, 0.2);
-    margin: 0 25px 0 25px;
+    margin: 0 20% 0 20%;
   }
-  #portfolio .project h3 {
-    font-size: 10vw;
-    white-space: nowrap;
-  }
-  #portfolio .project .tags {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 10px 0 10px;
-  }
-  #portfolio .project .tags p {
-    background-color: white;
-    border-color: black;
-    border-radius: 2px;
-    flex: 1 1 auto;
-    margin: 2px;
-  }
-  #portfolio #showcase {
-    text-align: center;
-  }
-  #portfolio #showcase #bunny-bear-button {
-    background-color: white;
-    border-color: black;
-    border-radius: 50px;
-    border-style: solid;
-  }
-  section header {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  section p {
-    font-size: 1.2em;
-    line-height: 1.5;
-  }
+}
+#portfolio .project h3 {
+  font-size: 1.5em;
+  white-space: nowrap;
+}
+#portfolio .project .tags {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 10px 0 10px;
+}
+#portfolio .project .tags p {
+  background-color: white;
+  border-color: black;
+  border-radius: 2px;
+  flex: 1 1 auto;
+  margin: 2px;
+}
+#portfolio #showcase {
+  text-align: center;
+}
+#portfolio #showcase #bunny-bear-button {
+  background-color: white;
+  border-color: black;
+  border-radius: 50px;
+  border-style: solid;
+}
+section header {
+  font-size: 1.2em;
+  text-align: center;
+}
+section p {
+  font-size: 1.2em;
+  line-height: 1.5;
 }

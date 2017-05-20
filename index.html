@@ -51,12 +51,21 @@
         </nav>
 
         <!-- Content -->
-        <header class="hidden" id="landing" onclick="addClass('landing', 'fadeOutFromDisplay')">
-                <h1>Branden Soropia</h1>
-                <h3>Software Developer</h3>
-        </header>
 
         <section class="hidden" id="about">
+            <section>
+                <header>
+                    <h2>About</h2>
+                </header>
+                <p>
+                    I'm an undergraduate Computer Science student at the Univerity of Toronto.
+                    I love learning new things, and when trying them out, I find myself meeting new people, finding new hobbies and gaining new skills.
+                    Because of this, I've found my passion for web and game development; it gives me the ability to see the result of my work and strive to refine it as far as I can take it.
+                </p>
+                <a href="files/BrandenSoropiaResume.pdf">
+                    DOWNLOAD RESUME
+                </a>
+            </section>
             <section>
                 <header>
                     <h2>A few fun facts.</h2>
@@ -95,19 +104,6 @@
                     >
                 </div>
             </section>
-            <section>
-                <header>
-                    <h2>About</h2>
-                </header>
-                <p>
-                    I'm an undergraduate Computer Science student at the Univerity of Toronto.
-                    I love learning new things, and when trying them out, I find myself meeting new people, finding new hobbies and gaining new skills.
-                    Because of this, I've found my passion for web and game development; it gives me the ability to see the result of my work and strive to refine it as far as I can take it.
-                </p>
-                <a href="files/BrandenSoropiaResume.pdf">
-                    DOWNLOAD RESUME
-                </a>
-            </section>
         </section>
 
         <section class="hidden" id="portfolio">
@@ -119,9 +115,9 @@
                 <!-- TODO: Keep title to single line and font size fills space -->
                 <h3>LoL Tournaments</h3>
                 <img
-                    sizes="150vw"
-                    srcset="img/projects/lol-tournaments-250.jpg 250w,
-                            img/projects/lol-tournaments-250.jpg 500w"
+                    sizes="(max-width: 600px) 75vw, 50vw"
+                    srcset="img/projects/lol-tournaments-500.jpg 500w,
+                            img/projects/lol-tournaments-750.jpg 750w"
                     alt="Applicant applied to one tournament and 2 visible open tournaments."
                 >
                 <div class="tags">
@@ -160,7 +156,9 @@
                 <input type="text" name="name" placeholder="Your Name" style="font-size: 1.25em; height: 5vh; margin-bottom: 10px;">
                 <input type="email" name="_replyto" placeholder="Your Email" style="font-size: 1.25em; height: 5vh; margin-bottom: 10px;">
                 <textarea name="body" placeholder="Send me something awesome." style="font-size: 1.25em; height: 40vh;"></textarea>
-                <input id="submit-email" type="submit" value="Send">
+                <div style="text-align: center;">
+                    <input id="submit-email" type="submit" value="Send">
+                </div>
             </form>
 
         </section>
